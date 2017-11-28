@@ -1,6 +1,8 @@
-Mapbox Styles - Eine von vielen Open Source Erfolgsgeschichten
+# WebMapping, aber mit Style!
 
-Mapbox Styles [1] entwickeln sich immer mehr zu einem Quasi-Standard für (clientseitiges) Rendering in WebGIS-Applikationen. In der Praxis überholen die JSON-basierten Mapbox Style Dokumente sogar offizielle Standards wie OGC SLD. Dies liegt primär an der Offenlegung der Spezifikation von Mapbox. Dies hatte eine Reihe von Open Source Entwicklungen zur Folge, die es heute möglich machen anspruchsvolle Styles in Webmapping-Applikationen zu bringen:
+## Mapbox Styles - Eine von vielen Open Source Erfolgsgeschichten
+
+Mapbox Styles [1] entwickeln sich immer mehr zu einem Quasi-Standard für (clientseitiges) Rendering in WebGIS-Applikationen. In der Praxis überholen die JSON-basierten Mapbox Style Dokumente sogar offizielle Standards wie OGC SLD. Dies liegt nicht zuletzt an der Offenlegung der Spezifikation von Mapbox. Das hatte eine Reihe von Open Source Entwicklungen zur Folge, die es heute möglich machen anspruchsvolle Styles in Webmapping-Applikationen zu bringen:
 
   - ol-mapbox-style: Bibliothek zur Integration von Mapbox Styles in OpenLayers [2]
   - Maputnik: Open Source WYSIWYG Editor für Mapbox Styles [3]
