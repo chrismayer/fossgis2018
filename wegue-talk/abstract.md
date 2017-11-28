@@ -17,5 +17,5 @@ Somit können Entwickler, aber auch technik-affine Nichtprogrammierer schnell zu
 [3] https://vuejs.org/
 
 ## Status
-  * Submitted: Nein
+  * Submitted: Ja
   * Angenommen: Nein
