@@ -15,3 +15,7 @@ Der Talk beleuchtet die o.g. Entwicklung aus persönlicher Sicht mit einigen Ank
 [2] https://github.com/boundlessgeo/ol-mapbox-style
 [3] https://github.com/maputnik/editor
 [4] http://docs.geoserver.org/stable/en/user/styling/mbstyle/index.html
+
+## Status
+  * Submitted: Ja
+  * Angenommen: Nein
