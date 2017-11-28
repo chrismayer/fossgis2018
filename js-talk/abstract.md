@@ -12,5 +12,5 @@ Der Vortrag gibt eine Übersicht über die heutigen Möglichkeiten der Geodatenv
 
 
 ## Status
-  * Submitted: Nein
+  * Submitted: Ja
   * Angenommen: Nein
