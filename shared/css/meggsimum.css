@@ -13,3 +13,9 @@
 .reveal a, .reveal .controls {
     color: #a40a0a;
 }
+
+.slide {
+    background-image: url(../img/meggsimum-logo-middle.png);
+    background-repeat: no-repeat;
+    background-position: 1% 97% ;
+}
