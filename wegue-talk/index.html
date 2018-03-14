@@ -4,9 +4,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta name="author" content="Christian Mayer" />
-    <meta name="author" content="Marc Jansen" />
     <title>Wegue - WebGIS-Anwendungen mit OpenLayers und Vue.js | Vortrag auf der FOSSGIS 2018, Bonn</title>
-    <meta name="description" content="GeoExt 3 in der Praxis" />
+    <meta name="description" content="Wegue - WebGIS-Anwendungen mit OpenLayers und Vue.js" />
     <!--[if lt IE 9]>
     <script src="../shared/lib/reveal.js-3.6.0/lib/js/html5shiv.js"></script>
     <![endif]-->
@@ -59,10 +58,10 @@
           <h2>Gliederung</h2>
           <ul>
             <li>Über&hellip;</li>
-            <li>...</li>
-            <li>...</li>
-            <li>...</li>
-            <li>...</li>
+            <li>Motivation</li>
+            <li>Das Wegue Projekt</li>
+            <li>Anwendungsaufbau</li>
+            <li>Beispiele</li>
           </ul>
         </section>
 
@@ -118,8 +117,222 @@
         </section>
 
         <section>
-          <h1>TODO</h1>
-          <h2>More TODO :-(</h2>
+          <h2>Naming is hard 😊😵😊</h2>
+          <p>
+            vue-ol-webapp-boilerplate ➡️
+            <span style="font-weight: bold;">We</span>b<span style="font-weight: bold;">G</span>IS with V<span style="font-weight: bold;">ue</span>.js and OpenLayers ➡️
+            <span style="font-weight: bold;">Wegue</span>
+          </p>
+
+          <img src="img/wagyu.jpg" alt="">
+          <p style="margin-top: 0; font-size: 11px;">
+            By <a href="//commons.wikimedia.org/wiki/User:Cgoodwin" title="User:Cgoodwin">Cgoodwin</a> - <span class="int-own-work" lang="en">Own work</span>, <a href="http://creativecommons.org/licenses/by/3.0" title="Creative Commons Attribution 3.0">CC BY 3.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=3575704">Link</a>
+          </p>
+        </section>
+
+        <section>
+          <h2>Motivation</h2>
+          <h4>Yet another JS-Webmapping Framework?</h4>
+
+          <img src="img/word-cloud-js-frameworks.png" alt="">
+        </section>
+
+        <section>
+          <h2>Motivation</h2>
+          <ul>
+            <li>Aufhänger: Kundenprojekt</li>
+            <li>Flexible Lizenz (Kein GPL)</li>
+            <li>Optimiert für alle Endgeräte</li>
+            <li>EcmaScript fähig</li>
+            <!-- <li>Flexibel einsetzbar (Standalone & Embedded)</li> -->
+            <li>Konfigurierbar</li>
+            <li>Schlankes WebGIS Template für weitere Anwendungen</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Wegue</h2>
+          <ul>
+            <li>Template für leichtgewichtigen WebGIS-Client-Anwendungen</li>
+            <li>Lizenz: BSD-2-Clause</li>
+            <li>Kombiniert auf Vue.js und OpenLayers</li>
+            <li>Konfigurierbar: Erweitertes HTML</li>
+            <li>Wiederverwendbare WebGIS-UI-Komponenten</li>
+            <li>Beliebiger JavaScript-Code ergänzbar</li>
+            <li><a href="https://github.com/meggsimum/wegue" title="User:Cgoodwin">Code (github)</a></li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Wegue</h2>
+          <p style="color: red;">TODO Grafik Aufbau</p>
+          <ul>
+            <li>Dependencies</li>
+            <ul>
+              <li>Vue.js</li>
+              <li>OpenLayers</li>
+              <li>Vuetify</li>
+            </ul>
+            <li>Webpack als Build Tools</li>
+            <li>Unit Test mit Karma</li>
+            <li>Eslint</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Vue.js</h2>
+          <ul>
+            <li>Clientseitiges JavaScript-Webframework (MVVM)</li>
+            <li>Lizenz: MIT</li>
+            <li>Flexibel einsetzbar (Standalone & Embedded)</li>
+            <li>Einfache API, leicht zu erlernen</li>
+            <li>Projektstruktur ohne zu viele Einschränkungen</li>
+            <li>Two-Way-Binding, Direktiven, (vererbbare) Komponenten, ...</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>OpenLayers</h2>
+          <blockquote>
+            A high-performance, feature-packed library for all your mapping needs.
+            <footer>&mdash; <cite><a href="https://openlayers.org/">openlayers.org, 14. März 2018</a></cite></footer>
+          </blockquote>
+          <ul>
+            <li>JavaScript Mapping-Bibliothek</li>
+            <li>Lizenz: BSD</li>
+            <li>OSGeo Projekt</li>
+            <li>Viele Daten- & Layerquellen, Interaktionen & Steuerelemente, ...</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Unterstützte Layertypen</h2>
+          <ul>
+            <li>OGC WMS</li>
+            <li>XYZ (TMS, WMTS, etc.)</li>
+            <li>Vektor-Layer (GeoJSON oder KML)</li>
+            <li>VectorTiles (MVT, GeoJSON oder TopoJSON)</li>
+            <li>OpenStreetMap</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Komponenten</h2>
+          <ul>
+            <li>Layer-Liste zur Steuerung der Sichtbarkeiten der Kartenlayer</li>
+            <li>Messwerkzeuge für Strecken und Flächen</li>
+            <li>Selektionswerkzeug für Vektordaten</li>
+            <li>Attributanzeige</li>
+            <li>Koordinatenanzeige</li>
+            <li>Toolbar zur Platzierung von Werkzeugen</li>
+            <li>Hilfe-Fenster zur Bereitstellung von Hilfetexten für den Anwender</li>
+            <li>Logo-Element</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>WebGIS-App (Einfach)</h2>
+          <p>
+             In <code>src/WguApp.vue</code> Template erweitern:
+          </p>
+          <pre><code data-trim>
+            <wgu-map :zoom="14" :center=[925067,6348943]>
+
+              <wgu-layer-osm slot="map-layers" :opacity="1.0" name="OSM"></wgu-layer-osm>
+
+            </wgu-map>
+          </code></pre>
+        </section>
+
+        <section>
+          <h2>WebGIS-App (Einfach)</h2>
+          <img src="img/simple-osm-app.jpg" alt="">
+        </section>
+
+        <section>
+          <h2>WebGIS-App (Erweitert)</h2>
+          <p>
+             In <code>src/WguApp.vue</code> Template erweitern:
+          </p>
+          <pre><code data-trim>
+            <wgu-app-header
+              title="Vue.js / OpenLayers WebGIS">
+
+              <v-toolbar-items slot="wgu-tb-buttons">
+
+                  <wgu-toggle-layerlist-button></wgu-toggle-layerlist-button>
+
+                  <wgu-toggle-measuretool-button></wgu-toggle-measuretool-button>
+
+                  <wgu-toggle-helpwin-button></wgu-toggle-helpwin-button>
+
+              </v-toolbar-items>
+
+            </wgu-app-header>
+          </code></pre>
+        </section>
+
+        <section>
+          <h2>WebGIS-App (Erweitert)</h2>
+          <img src="img/advanced-osm-app.jpg" alt="">
+        </section>
+
+        <section>
+          <h2>Zukünftig: JSON Konfiguration</h2>
+          <ul>
+            <li>App-Template wird kompiliert</li>
+            <li>Keine Veränderung ohne Build-Prozess</li>
+            <ul>
+              <li>Unflexibel</li>
+              <li>Schwierig für "Nicht-Coder"</li>
+            </ul>
+            <li>Auslagerung in JSON-Konfiguration</li>
+          </ul>
+          <h3 style="margin-top:30px;">➡️ Auslagerung in JSON-Konfiguration</h3>
+        </section>
+
+        <section>
+          <h2>Zukünftig: JSON Konfiguration</h2>
+          <pre><code data-trim>
+{
+  "mapZoom": 2,
+  "mapCenter": [0, 0],
+  "mapLayers": [
+    {
+      "type": "WMS",
+      "lid": "ahocevar-wms",
+      "name": "WMS (ahocevar)",
+      "format": "image/png",
+      "layers": "topp:states",
+      "url": "https://ahocevar.com/geoserver/wms"
+    },
+    {
+      "type": "OSM",
+      "lid": "osm-bg",
+      "name": "OSM",
+      "visibility": true
+    }
+  ]
+}
+          </code></pre>
+        </section>
+
+        <section>
+          <h1>Beispiele</h1>
+        </section>
+
+        <section>
+          TODO Base App
+        </section>
+
+        <section
+          data-background-image="img/traffic-analytics-app.jpg"
+          data-background-size="contain">
+          <p>&nbsp;</p>
+        </section>
+
+        <section>
+          Wordpress
         </section>
 
         <section id="thanks-questions">
