@@ -6,7 +6,7 @@
     <meta name="author" content="Christian Mayer" />
     <meta name="author" content="Marc Jansen" />
     <title>Adult.js - JavaScript ist erwachsen geworden! | Vortrag auf der FOSSGIS 2018, Bonn</title>
-    <meta name="description" content="GeoExt 3 in der Praxis" />
+    <meta name="description" content="Adult.js - JavaScript ist erwachsen geworden!" />
     <!--[if lt IE 9]>
     <script src="../shared/lib/reveal.js-3.6.0/lib/js/html5shiv.js"></script>
     <![endif]-->
@@ -167,8 +167,48 @@
         </section>
 
         <section>
-          <h1>TODO</h1>
-          <h2>More TODO :-(</h2>
+          <h1>JavaScript früher</h1>
+        </section>
+
+        <section>
+          <h2>Script-Tag und ein paar Zeilen Code</h2>
+          <pre><code data-trim>
+            <div id="map" class="smallmap"></div>
+            <script src="../OpenLayers.js"></script>
+            <script>
+              var map = new OpenLayers.Map("map");
+              var ol_wms = new OpenLayers.Layer.WMS(
+                "OpenLayers WMS",
+                "http://vmap0.tiles.osgeo.org/wms/vmap0",
+                {layers: "basic"}
+              );
+              map.addLayers([ol_wms, dm_wms]);
+            </script>
+          </code></pre>
+        </section>
+
+        <section>
+          <h1>JavaScript heute</h1>
+        </section>
+
+        <section>
+          <h2>Framework Wahnsinn</h2>
+        </section>
+
+        <section>
+          <h2>JavaScript vs. EcmaScript vs. TypeScript</h2>
+        </section>
+
+        <section>
+          <h2>Build Tools</h2>
+        </section>
+
+        <section>
+          <h1>JavaScript im GIS-Umfeld</h1>
+        </section>
+
+        <section>
+          <h1>Fazit</h1>
         </section>
 
         <section id="thanks-questions">
