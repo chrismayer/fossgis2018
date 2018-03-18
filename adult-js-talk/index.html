@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="de">
-  <head>
+<head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta name="author" content="Christian Mayer" />
@@ -22,384 +22,438 @@
 
     <!-- Printing and PDF exports -->
     <script>
-      var link = document.createElement( 'link' );
-      link.rel = 'stylesheet';
-      link.type = 'text/css';
-      link.href = window.location.search.match( /print-pdf/gi ) ?
-        '../shared/lib/reveal.js-3.6.0/css/print/pdf.css' :
-        '../shared/lib/reveal.js-3.6.0/css/print/paper.css';
-      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ?
+    '../shared/lib/reveal.js-3.6.0/css/print/pdf.css' :
+    '../shared/lib/reveal.js-3.6.0/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
     </script>
 
-  </head>
-  <body>
+</head>
+<body>
 
 
-<!-- BEGIN OF SLIDES -->
+    <!-- BEGIN OF SLIDES -->
 
 
     <div class="reveal">
-      <div class="slides">
+        <div class="slides">
 
-        <section id="start">
-          <h1>Adult.js</h1>
-          <h3>JavaScript ist erwachsen geworden!</h3>
-          <p>
-            <small>Christian Mayer &amp; Marc Jansen</small>
-          </p>
-          <p>
-            <span style="font-size: small;">FOSSGIS 2018, Bonn, 22.03.2018</small>
-          </p>
-        </section>
+            <section id="start">
+                <h1>Adult.js</h1>
+                <h3>JavaScript ist erwachsen geworden!</h3>
+                <p>
+                    <small>Christian Mayer &amp; Marc Jansen</small>
+                </p>
+                <p>
+                    <span style="font-size: small;">FOSSGIS 2018, Bonn, 22.03.2018</small>
+                    </p>
+                </section>
 
-        <section id="toc">
-          <h2>Gliederung</h2>
-          <ul>
-            <li>Über&hellip;</li>
-            <li>...</li>
-            <li>...</li>
-            <li>...</li>
-            <li>...</li>
-          </ul>
-        </section>
+                <section id="toc">
+                    <h2>Gliederung</h2>
+                    <ul>
+                        <li>Über&hellip;</li>
+                        <li>Motiviation &amp; Ziel</li>
+                        <li>kiddie.js</li>
+                        <li>adult.js</li>
+                        <li>Best Practices</li>
+                    </ul>
+                </section>
 
-        <section id="author-christian-mayer">
-          <h2>Christian Mayer</h2>
-          <div class="split-info">
-            <div class="part" style="width:35%">
-              <img src="../shared/img/chris-mayer.jpg" class="plain" width="200"/><br />
-              <small>
-                <a class="email" href="mailto:chris@meggsimum">chris@meggsimum.de</a><br />
-                <a class="github" href="https://github.com/chrismayer/">@chrismayer</a><br />
-                <a class="twitter" href="https://twitter.com/geofootballer/">@geofootballer</a><br />
-              </small><br />
+                <section id="author-christian-mayer">
+                    <h2>Christian Mayer</h2>
+                    <div class="split-info">
+                        <div class="part" style="width:35%">
+                            <img src="../shared/img/chris-mayer.jpg" class="plain" width="200"/><br />
+                            <small>
+                                <a class="email" href="mailto:chris@meggsimum">chris@meggsimum.de</a><br />
+                                <a class="github" href="https://github.com/chrismayer/">@chrismayer</a><br />
+                                <a class="twitter" href="https://twitter.com/geofootballer/">@geofootballer</a><br />
+                            </small><br />
+                        </div>
+                        <div class="part"  style="width:60%">
+                            <div class="enumeration">
+                                <ul>
+                                    <li>Geoinformatiker</li>
+                                    <li>Softwareentwickler &amp; -architekt</li>
+                                    <li>Kernentwickler und PSC Mitglied GeoExt</li>
+                                    <li>Sprecher &amp; Trainer <br /> national &amp; international</li>
+                                    <li>OSGeo Foundation Charter Member</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="clear:both"></div>
+                </section>
+
+                <section id="about-company-meggsimum">
+                    <h2>meggsimum</h2>
+                    <div class="split-info">
+                        <div class="part" style="width:35%">
+                            <img src="../shared/img/meggsimum-logo.png" class="plain" width="200"/>
+                            <br /><br />
+                            <a class="github" href="https://github.com/meggsimum/">@meggsimum</a><br />
+                            <a class="twitter" href="https://twitter.com/meggsimum/">@meggsimum</a>
+                        </div>
+                        <div class="part" style="width:60%">
+                            <div class="enumeration">
+                                <ul>
+                                    <li><a href="https://meggsimum.de/">meggsimum.de</a></li>
+                                    <li>Dienstleistungen im Bereich GIS, Webmapping &amp; GDI</li>
+                                    <li>Maßgeschneiderte WebGIS-Lösungen</li>
+                                    <li>Softwarekonzepte und Softwareentwicklung</li>
+                                    <li>Geodaten</li>
+                                    <li>Beratung und Schulung</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="clear:both"></div>
+                </section>
+
+                <section id="author-marc-jansen">
+                    <h2>Marc Jansen</h2>
+                    <div class="split-info">
+                        <div class="part" style="width:35%">
+                            <img src="../shared/img/mj.jpg" class="plain" width="200"/><br />
+                            <small>
+                                <a class="email" href="mailto:jansen@terrestris.de">jansen@terrestris.de</a><br />
+                                <a class="github" href="https://github.com/marcjansen/">@terrestris</a><br />
+                                <a class="twitter" href="https://twitter.com/selectoid/">@selectoid</a><br />
+                            </small><br />
+                            <img src="../shared/img/openlayers_de_1ed.png" class="plain" width=100 />
+                        </div>
+                        <div class="part" style="width:60%">
+                            <div class="enumeration">
+                                <ul>
+                                    <li>Gesch&auml;ftsf&uuml;hrer @terrestris</li>
+                                    <li>Kernentwickler OpenLayers</li>
+                                    <li>Kernentwickler GeoExt</li>
+                                    <li>Buchautor "OpenLayers"</li>
+                                    <li>Sprecher &amp; Trainer <br /> national &amp; international</li>
+                                    <li>OSGeo Foundation Charter Member</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="clear:both"></div>
+                </section>
+
+                <section id="about-company-terrestris">
+                    <h2>terrestris</h2>
+                    <div class="split-info">
+                        <div class="part" style="width:35%">
+                            <img src="../shared/img/terrestris-logo.png" class="plain" width="200"/>
+                            <br /><br />
+                            <a class="github" href="https://github.com/terrestris/">@terrestris</a><br />
+                            <a class="twitter" href="https://twitter.com/terrestrisde/">@terrestrisde</a>
+                        </div>
+                        <div class="part" style="width:60%">
+                            <div class="enumeration">
+                                <ul>
+                                    <li><a href="https://terrestris.de/">terrestris.de</a></li>
+                                    <li>OpenSource GIS aus Bonn</li>
+                                    <li>Entwicklung, Projekte &amp; Support/Schulung</li>
+                                    <li>Beratung, Planung, Implementierung &amp; Wartung</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="clear:both"></div>
+                </section>
+
+                <section>
+                    <h1>Motivation &amp; Ziel</h1>
+                </section>
+
+                <section>
+                    <h2>Motivation &amp; Ziel</h2>
+                    <ul>
+                        <li>Wir beide machen seit vielen Jahren JavaScript-Projekte</li>
+                        <li>Zunehmende Komplexität</li>
+                        <li>Zunehmende Funktionalität</li>
+                        <li>Zeiten von Spielsprache lange vorbei</li>
+                        <li>Ziel: Professionalisierung aufzeigen</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h1>kiddie.js</h1>
+                    <h3>JavaScript damals</h3>
+                </section>
+
+                <section>
+                    <h2>Entstehung</h2>
+                    <div class="split-info">
+                        <div class="part" style="width:35%">
+                            <img src="../shared/img/brandon-eich.jpg" class="plain" width="200"/>
+                            <small>Brandon Eich, <a href="https://de.wikipedia.org/wiki/Datei:BEich.jpg">Quelle</a> </small>
+                        </div>
+                        <div class="part" style="width:60%">
+                            <ul>
+                                <li>1995</li>
+                                <li>Netscape</li>
+                                <li>Mocha ➡️ LiveScript ➡️ JavaScript</li>
+                                <li>Browser-Skriptsprache</li>
+                                <li>Interativität in Webseiten</li>
+                                <li>Kurzzeitig serverseitige Unterstützung (Netscape-Webservern)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div style="clear:both"></div>
+                </section>
+
+                <section>
+                    <h2>Script-Tag und ein paar Zeilen Code</h2>
+                    <pre><code data-trim>
+                        <div id="map" class="smallmap"></div>
+                        <script src="../OpenLayers.js"></script>
+                        <script>
+                        var map = new OpenLayers.Map("map");
+                        var olWms = new OpenLayers.Layer.WMS(
+                            "OpenLayers WMS",
+                            "http://vmap0.tiles.osgeo.org/wms/vmap0",
+                            {layers: "basic"}
+                        );
+                        map.addLayers([olWms]);
+                        </script>
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h2>Script-Tag und ein paar Zeilen Code</h2>
+                    <ul>
+                        <li>Einfache kleine Programme</li>
+                        <li>STRG + U ➡️ Entwicklers bester Freund</li>
+                        <li>Editieren auf dem Server</li>
+                        <li>Meist in Kombination mit serverseitigen Skripten</li>
+                        <li class="fragment">steigende Komplexität der Anwendung ➡️
+                            Chaos in der Organisation der Eingangsdateien</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <blockquote class="twitter-tweet" data-lang="de"><p lang="en" dir="ltr">„View source“ embodies the very essence of the web I learned to love so much. The magic of writing something into a text file, opening it in a browser and being able to see and learn from the source of every single site: <a href="https://t.co/wxzHwWK8hm">https://t.co/wxzHwWK8hm</a></p>&mdash; Bastian Allgeier (@bastianallgeier) <a href="https://twitter.com/bastianallgeier/status/966255491872645120?ref_src=twsrc%5Etfw">21. Februar 2018</a></blockquote>
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                    <blockquote class="twitter-tweet" style="float:right" data-lang="de"><p lang="en" dir="ltr">Can we agree that, in 2018, human-readable &quot;View Source&quot; is a constraint the web can discard? I benefitted from &quot;View Source&quot; too, but today we have an embarrassment of resources and open source examples I would have killed for as a kid.</p>&mdash; Tom Dale (@tomdale) <a href="https://twitter.com/tomdale/status/965681976199077889?ref_src=twsrc%5Etfw">19. Februar 2018</a></blockquote>
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </section>
+
+                <section>
+                    <h1>adult.js</h1>
+                    <h3>JavaScript heute</h3>
+                </section>
+
+                <section>
+                    <h2>Everything.js &amp; Nothing.js</h2>
+                </section>
+
+                <section>
+                    <h2>Heute</h2>
+                    <ul>
+                        <li>Frameworks &amp; Libraries en masse</li>
+                        <li>Tools und Paradigmen dito</li>
+                        <li>Boilerplates / Genratoren etc.</li>
+                        <li>Typescript &amp; Flow</li>
+                        <li>Jedes Jahr ein neues Ecmascript</li>
+                        <li>JS überall: Browser &amp; Node.js</li>
+                        <li><code>&lt;noscript&gt;</code>?</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <blockquote cite="https://medium.com/@ericclemmons/javascript-fatigue-48d4011b6fc4">
+                        Ultimately, the problem is that by choosing React (and inherently JSX), you’ve unwittingly opted into a confusing nest of build tools, boilerplate, linters, & time-sinks to deal with before you ever get to <span class="highlight">create</span> anything.
+                    </blockquote>
+                    <small>Hervorhebung von uns, https://medium.com/@ericclemmons/javascript-fatigue-48d4011b6fc4</small>
+                </section>
+
+                <section>
+                    <h2>Professionalität bekommt man nicht umsonst</h2>
+                </section>
+
+                <section>
+                    <h1>Best practices</h1>
+                </section>
+
+                <section>
+                    <h2>Node.js - JavaScript auf dem Server</h2>
+                    <ul>
+                        <li>Serverseitige JavaScript Plattform</li>
+                        <li>Verarbeitung von großen Datenmengen durch nicht blockierendes IO-System</li>
+                        <li>Event-basiert</li>
+                        <li>Ideal für Webanwendungen</li>
+                        <li>Open Source (MIT)</li>
+                        <li>Vortrag <a href="https://www.fossgis-konferenz.de/2015/programm/events/845.de.html">"Serverseitiges JavaScript und GIS Fossgis 2015"</a></li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Node.js - JavaScript auf dem Server</h2>
+                    <ul>
+                        <li>Meist im Zusammenspiel mit npm</li>
+                        <li>Oft im Bereich der Frontend-Entwicklung</li>
+                        <ul>
+                            <li>Webserver</li>
+                            <li>Dependency-Management</li>
+                            <li>Build-Tools</li>
+                            <li>Unit Testing</li>
+                        </ul>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>JavaScript vs. EcmaScript vs. TypeScript</h2>
+                    <p class="fragment">
+                        Findet Euren Favoriten
+                    </p>
+                </section>
+
+                <section>
+                    <h2>Build Tools</h2>
+                    <ul>
+                        <li>JS wird komprimiert und kompiliert ausgeliefert</li>
+                        <li>Komprimierung und Optimerung des Quellcodes</li>
+                        <li>Verwendung neuester Sprachfeatures</li>
+                        <li>Ausführung vor Deployment / Installation</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Build Tools</h2>
+                    <blockquote class="twitter-tweet" data-lang="de"><p lang="en" dir="ltr">“I don’t need macros, they’re too complicated and not useful,” says the programmer as they use Flow with JSX with Babel with two dozen plugins and maintain two hundred line webpack configs for code with machine-checked comments that parses CSS in template strings at runtime and—</p>&mdash; Alexis King (@lexi_lambda) <a href="https://twitter.com/lexi_lambda/status/948435311058599936?ref_src=twsrc%5Etfw">3. Januar 2018</a></blockquote>
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </section>
+
+                <section>
+                    <h1>JavaScript im GIS-Umfeld</h1>
+                </section>
+
+                <section>
+                    <h2>JS GIS</h2>
+                    <ul>
+                        <li>Turf.js</li>
+                        <li>OpenLayers</li>
+                        <li>Leaflet</li>
+                        <li>Mapbox</li>
+                        <li>d3.js</li>
+                        <li>...</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>JS GIS</h2>
+                    <ul>
+                        <li>De-Facto-Standardsprache für WebGIS Anwendungen</li>
+                        <li>Durch Node.js auch GIS-Server-Komponenten</li>
+                        <li>Aus täglicher Arbeit nicht mehr wegzudenken</li>
+                        <li>Komplexe Fachanwendungen mit JS</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Fazit</h2>
+                    <ul>
+                        <li>Sehr hoher Professionialisierungsgrad</li>
+                        <li>Unglaubliches Momentum in der Weiterentwicklung</li>
+                        <li>Durchaus komplexe Konstrukte</li>
+                        <li>Manchmal zu viel Overhead</li>
+                        <li>…jedoch auch reichlich Dokumentation</li>
+                        <li>JavaScript unbekannt? Lern es, es lohnt sich</li>
+                        <li>JavaScript Pro? Hinterfrag Dich und lerne weiter</li>
+                    </ul>
+                </section>
+
+                <section id="thanks-questions">
+                    <h4>Vielen Dank</h4>
+                    <hr />
+                    <h1 style="font-size:3.0em">Fragen &amp; Anmerkungen?</h1>
+                    <hr />
+                    <p class="subtle">
+                        <a href="#/imprint">Impressum</a>
+                    </p>
+                </section>
+
+                <section id="imprint">
+                    <h2>Impressum</h2>
+                    <h4>Autor</h4>
+                    <div style="">
+                        <address style="width: 45%; float: left; text-align: left">
+                            <strong>Christian Mayer</strong><br />
+                            <span style="font-size: smaller;">
+                                meggsimum Geoinformatik<br />
+                                Hauptstraße 165a<br />
+                                67125 Dannstadt-Schauernheim<br />
+                                chris@meggsimum.de
+                            </span>
+                        </address>
+                    </div>
+                    <div style="width: 45%; float: right;">
+                        <address style="text-align: right">
+                            <strong>Marc Jansen</strong><br />
+                            <span style="font-size: smaller;">
+                                terrestris GmbH &amp; Co. KG<br />
+                                Kölnstr. 99<br />
+                                53111 Bonn<br />
+                                jansen@terrestris.de
+                            </span>
+                        </address>
+                    </div>
+                    <h4 style="clear:both;">Lizenz</h4>
+                    <p id="license">
+                        Diese Folien sind unter <a
+                        href="http://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA</a>
+                        veröffentlicht.
+                    </p>
+                    <p>
+                        <a href="https://rawgit.com/chrismayer/fossgis2018/master/wegue-talk/index.html">Vortragsfolien</a>,
+                        <a href="https://rawgit.com/chrismayer/fossgis2017/master/geoext3-talk/geoext-3-in-der-praxis-mayer-jansen-fossgis-2017.pdf">TODO PDF-Version</a>,
+                        <a href="https://github.com/chrismayer/fossgis2018">git repository</a>
+                    </p>
+                </section>
+
             </div>
-            <div class="part"  style="width:60%">
-              <div class="enumeration">
-                <ul>
-                  <li>Geoinformatiker</li>
-                  <li>Softwareentwickler &amp; -architekt</li>
-                  <li>Kernentwickler und PSC Mitglied GeoExt</li>
-                  <li>Sprecher &amp; Trainer <br /> national &amp; international</li>
-                  <li>OSGeo Foundation Charter Member</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div style="clear:both"></div>
-        </section>
-
-        <section id="about-company-meggsimum">
-          <h2>meggsimum</h2>
-          <div class="split-info">
-            <div class="part" style="width:35%">
-              <img src="../shared/img/meggsimum-logo.png" class="plain" width="200"/>
-              <br /><br />
-              <a class="github" href="https://github.com/meggsimum/">@meggsimum</a><br />
-              <a class="twitter" href="https://twitter.com/meggsimum/">@meggsimum</a>
-            </div>
-            <div class="part" style="width:60%">
-              <div class="enumeration">
-                <ul>
-                  <li><a href="https://meggsimum.de/">meggsimum.de</a></li>
-                  <li>Dienstleistungen im Bereich GIS, Webmapping &amp; GDI</li>
-                  <li>Maßgeschneiderte WebGIS-Lösungen</li>
-                  <li>Softwarekonzepte und Softwareentwicklung</li>
-                  <li>Geodaten</li>
-                  <li>Beratung und Schulung</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div style="clear:both"></div>
-        </section>
-
-        <section id="author-marc-jansen">
-          <h2>Marc Jansen</h2>
-          <div class="split-info">
-            <div class="part" style="width:35%">
-              <img src="../shared/img/mj.jpg" class="plain" width="200"/><br />
-              <small>
-                <a class="email" href="mailto:jansen@terrestris.de">jansen@terrestris.de</a><br />
-                <a class="github" href="https://github.com/marcjansen/">@terrestris</a><br />
-                <a class="twitter" href="https://twitter.com/selectoid/">@selectoid</a><br />
-              </small><br />
-              <img src="../shared/img/openlayers_de_1ed.png" class="plain" width=100 />
-            </div>
-            <div class="part" style="width:60%">
-              <div class="enumeration">
-                <ul>
-                  <li>Seit 2007 Entwickler / Projektleiter bei terrestris</li>
-                  <li>Kernentwickler und PSC Mitglied GeoExt</li>
-                  <li>Kernentwickler OpenLayers</li>
-                  <li>Buchautor "OpenLayers"</li>
-                  <li>Sprecher &amp; Trainer <br /> national &amp; international</li>
-                  <li>OSGeo Foundation Charter Member</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div style="clear:both"></div>
-        </section>
-
-        <section id="about-company-terrestris">
-          <h2>terrestris</h2>
-          <div class="split-info">
-            <div class="part" style="width:35%">
-              <img src="../shared/img/terrestris-logo.png" class="plain" width="200"/>
-              <br /><br />
-              <a class="github" href="https://github.com/terrestris/">@terrestris</a><br />
-              <a class="twitter" href="https://twitter.com/terrestrisde/">@terrestrisde</a>
-            </div>
-            <div class="part" style="width:60%">
-              <div class="enumeration">
-                <ul>
-                  <li><a href="https://terrestris.de/">terrestris.de</a></li>
-                  <li>OpenSource GIS aus Bonn</li>
-                  <li>Entwicklung, Projekte &amp; Support/Schulung</li>
-                  <li>Beratung, Planung, Implementierung &amp; Wartung</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div style="clear:both"></div>
-        </section>
-
-        <section>
-          <h1>JavaScript damals</h1>
-        </section>
-
-        <section>
-          <h2>Entstehung</h2>
-          <ul>
-            <li>1995</li>
-            <li>Netscape</li>
-            <li>Mocha ➡️ LiveScript ➡️ JavaScript</li>
-            <li>Browser-Skriptsprache</li>
-            <li>Interativität in Webseiten</li>
-            <li>Kurzzeitig serverseitige Unterstützung (Netscape-Webservern)</li>
-          </ul>
-        </section>
-
-        <section>
-          <h2>Script-Tag und ein paar Zeilen Code</h2>
-          <pre><code data-trim>
-            <div id="map" class="smallmap"></div>
-            <script src="../OpenLayers.js"></script>
-            <script>
-              var map = new OpenLayers.Map("map");
-              var olWms = new OpenLayers.Layer.WMS(
-                "OpenLayers WMS",
-                "http://vmap0.tiles.osgeo.org/wms/vmap0",
-                {layers: "basic"}
-              );
-              map.addLayers([olWms]);
-            </script>
-          </code></pre>
-        </section>
-
-        <section>
-          <h2>Script-Tag und ein paar Zeilen Code</h2>
-          <ul>
-            <li>Einfache kleine Programme</li>
-            <li>STRG + U ➡️ Entwicklers bester Freund</li>
-            <li>Editieren auf dem Server</li>
-            <li>Meist in Kombination mit servers. Skripten</li>
-          </ul>
-        </section>
-
-        <section>
-          <h2>Script-Tag und ein paar Zeilen Code</h2>
-          <blockquote class="twitter-tweet" data-lang="de"><p lang="en" dir="ltr">„View source“ embodies the very essence of the web I learned to love so much. The magic of writing something into a text file, opening it in a browser and being able to see and learn from the source of every single site: <a href="https://t.co/wxzHwWK8hm">https://t.co/wxzHwWK8hm</a></p>&mdash; Bastian Allgeier (@bastianallgeier) <a href="https://twitter.com/bastianallgeier/status/966255491872645120?ref_src=twsrc%5Etfw">21. Februar 2018</a></blockquote>
-          <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-        </section>
-
-        <section>
-          <h1>JavaScript heute</h1>
-        </section>
-
-        <section>
-          <h2>Everything.js &amp; Nothing.js</h2>
-        </section>
-
-        <section>
-          <h2>Der JS-Framework Wahnsinn</h2>
-          <ul>
-            <li>Ziel: Einheitliches und vor allem browserübergreifendes Fundament</li>
-            <li></li>
-            <li></li>
-            <li></li>
-          </ul>
-        </section>
-
-        <section>
-          <h2>Node.js - JavaScript auf dem Server</h2>
-          <ul>
-            <li>Serverseitige JavaScript Plattform</li>
-            <li>Verarbeitung von großen Datenmengen durch nicht blockierendes IO-System</li>
-            <li>Event-basiert</li>
-            <li>Ideal für Webanwendungen</li>
-            <li>Open Source (MIT)</li>
-            <li>Vortrag <a href="https://www.fossgis-konferenz.de/2015/programm/events/845.de.html">"Serverseitiges JavaScript und GIS Fossgis 2015"</a></li>
-          </ul>
-        </section>
-
-        <section>
-          <h2>Node.js - JavaScript auf dem Server</h2>
-          <ul>
-            <li>Meist im Zusammenspiel mit npm</li>
-            <li>Oft im Bereich der Frontend-Entwicklung</li>
-            <ul>
-              <li>Webserver</li>
-              <li>Dependency-Management</li>
-              <li>Build-Tools</li>
-              <li>Unit Testing</li>
-            </ul>
-          </ul>
-        </section>
-
-        <section>
-          <h2>JavaScript vs. EcmaScript vs. TypeScript</h2>
-        </section>
-
-        <section>
-          <h2>Build Tools</h2>
-          <ul>
-            <li>JS wird komprimiert und kompiliert ausgeliefert</li>
-            <li>Komprimierung und Optimerung des Quellcodes</li>
-            <li>Ausführung vor Deployment / Installation</li>
-          </ul>
-        </section>
-
-        <section>
-          <h2>Build Tools</h2>
-          <blockquote class="twitter-tweet" data-lang="de"><p lang="en" dir="ltr">“I don’t need macros, they’re too complicated and not useful,” says the programmer as they use Flow with JSX with Babel with two dozen plugins and maintain two hundred line webpack configs for code with machine-checked comments that parses CSS in template strings at runtime and—</p>&mdash; Alexis King (@lexi_lambda) <a href="https://twitter.com/lexi_lambda/status/948435311058599936?ref_src=twsrc%5Etfw">3. Januar 2018</a></blockquote>
-          <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-        </section>
-
-        <section>
-          <h1>JavaScript im GIS-Umfeld</h1>
-        </section>
-
-        <section>
-          <h2>JS GIS</h2>
-          <ul>
-            <li>Turf.js</li>
-            <li>OpenLayers</li>
-            <li>Leaflet</li>
-            <li>Mapbox</li>
-            <li>d3.js</li>
-            <li>...</li>
-          </ul>
-        </section>
-
-        <section>
-          <h2>JS GIS</h2>
-          <ul>
-            <li>De-Facto-Standardsprache für WebGIS Anwendungen</li>
-            <li>Durch Node.js auch GIS-Server-Komponenten</li>
-            <li>Aus täglicher Arbeit nicht mehr wegzudenken</li>
-            <li>Komplexe Fachanwedungen mit JS</li>
-          </ul>
-        </section>
-
-        <section>
-          <h2>Fazit</h2>
-          <ul>
-            <li>Sehr hoher Professionialisierungsgrad</li>
-            <li>Durchaus komplexe Konstrukte</li>
-            <li>Manchmal zu viel Overhead</li>
-            <li></li>
-            <li></li>
-          </ul>
-        </section>
-
-        <section id="thanks-questions">
-          <h4>Vielen Dank</h4>
-          <hr />
-          <h1 style="font-size:3.0em">Fragen &amp; Anmerkungen?</h1>
-          <hr />
-          <p class="subtle">
-            <a href="#/imprint">Impressum</a>
-          </p>
-        </section>
-
-        <section id="imprint">
-          <h2>Impressum</h2>
-          <h4>Autor</h4>
-          <div style="">
-            <address style="width: 45%; float: left; text-align: left">
-              <strong>Christian Mayer</strong><br />
-              <span style="font-size: smaller;">
-              meggsimum Geoinformatik<br />
-              Hauptstraße 165a<br />
-              67125 Dannstadt-Schauernheim<br />
-              chris@meggsimum.de
-              </span>
-            </address>
-          </div>
-          <div style="width: 45%; float: right;">
-              <address style="text-align: right">
-                <strong>Marc Jansen</strong><br />
-                <span style="font-size: smaller;">
-                terrestris GmbH &amp; Co. KG<br />
-                Kölnstr. 99<br />
-                53111 Bonn<br />
-                jansen@terrestris.de
-                </span>
-              </address>
-          </div>
-          <h4 style="clear:both;">Lizenz</h4>
-          <p id="license">
-            Diese Folien sind unter <a
-            href="http://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA</a>
-            veröffentlicht.
-          </p>
-          <p>
-            <a href="https://rawgit.com/chrismayer/fossgis2018/master/wegue-talk/index.html">Vortragsfolien</a>,
-            <a href="https://rawgit.com/chrismayer/fossgis2017/master/geoext3-talk/geoext-3-in-der-praxis-mayer-jansen-fossgis-2017.pdf">TODO PDF-Version</a>,
-            <a href="https://github.com/chrismayer/fossgis2018">git repository</a>
-          </p>
-        </section>
-
-      </div>
-    </div>
+        </div>
 
 
-<!-- END OF SLIDES -->
+        <!-- END OF SLIDES -->
 
 
-    <script src="../shared/lib/reveal.js-3.6.0/lib/js/head.min.js"></script>
-    <script src="../shared/lib/reveal.js-3.6.0/js/reveal.js"></script>
-    <script>
-(function () {
-  var revealPath = '../shared/lib/reveal.js-3.6.0/';
-  // More info https://github.com/hakimel/reveal.js#configuration
-  Reveal.initialize({
-    history: true,
+        <script src="../shared/lib/reveal.js-3.6.0/lib/js/head.min.js"></script>
+        <script src="../shared/lib/reveal.js-3.6.0/js/reveal.js"></script>
+        <script>
+        (function () {
+            var revealPath = '../shared/lib/reveal.js-3.6.0/';
+            // More info https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                history: true,
 
-    // More info https://github.com/hakimel/reveal.js#dependencies
-    dependencies: [
-      {
-        src: revealPath + 'plugin/markdown/marked.js'
-      },
-      {
-        src: revealPath + 'plugin/markdown/markdown.js'
-      },
-      {
-        src: revealPath + 'plugin/notes/notes.js',
-        async: true
-      },
-      {
-        src: revealPath + 'plugin/highlight/highlight.js',
-        async: true,
-        callback: function() {
-          hljs.initHighlightingOnLoad();
-        }
-      }
-    ]
-  });
-}());
-    </script>
-  </body>
-</html>
+                // More info https://github.com/hakimel/reveal.js#dependencies
+                dependencies: [
+                    {
+                        src: revealPath + 'plugin/markdown/marked.js'
+                    },
+                    {
+                        src: revealPath + 'plugin/markdown/markdown.js'
+                    },
+                    {
+                        src: revealPath + 'plugin/notes/notes.js',
+                        async: true
+                    },
+                    {
+                        src: revealPath + 'plugin/highlight/highlight.js',
+                        async: true,
+                        callback: function() {
+                            hljs.initHighlightingOnLoad();
+                        }
+                    }
+                ]
+            });
+        }());
+        </script>
+    </body>
+    </html>
